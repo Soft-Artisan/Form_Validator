@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+/* Setting up custom properties (CSS variables) for reuse. 
+These are global and can be accessed throughout the CSS. */
+:root {
+    /* Defining a color variable for successful feedback, typically green to signify "success" */
+    --success-color: #2ecc71;
+    /* Defining a color variable for error feedback, typically red to signify "error" or "alert" */
+    --error-color: #e74c3c;
+  }
+  
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f9fafb;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin: 0 0 20px;
+  }
+  
+  .form {
+    padding: 30px 40px;
+  }
+  
+  .form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+  }
+  
+  .form-control label {
+    color: #777;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+/* Styling the input field when it gains focus (is clicked on or tabbed into) */
+  .form-control input:focus {
+    /* Removes the default browser outline */
+    outline: 0;
+    /* Sets the border color to a gray tone when the input is focused */
+    border-color: #777;
+  }
+  
+  /* Applying styles to input fields inside a form-control element that has the 'success' class */
+  .form-control.success input {
+    /* Change the border color to the "success" color (green) when input is valid */
+    border-color: var(--success-color);
+  }
+  
+  /* Applying styles to input fields inside a form-control element that has the 'error' class */
+  .form-control.error input {
+    /* Change the border color to the "error" color (red) when there's an invalid input */
+    border-color: var(--error-color);
+  }
+  
+  /* Styling the <small> tag which will display error messages */
+  .form-control small {
+    /* Setting the text color for the error message to our predefined error color (red) */
+    color: var(--error-color);
+    /* Positioning the error message right below the input field */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* Initially, error messages are hidden */
+    visibility: hidden;
+  }
+  
+  /* Altering the visibility of the <small> error message when form-control has the 'error' class */
+  .form-control.error small {
+    /* Making the error message visible when the parent form-control has the 'error' class */
+    visibility: visible;
+  }
+
+.form button {
+    cursor: pointer;
+    background-color: #3498db;
+    border: 2px solid #3498db;
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+  }
+  /* Base style for all input placeholders */
+input::placeholder {
+    color: #cbc7c7;  
+    font-style: italic;
+  
+  

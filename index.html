@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form Validator Project</title>
+</head>
+<body>
+     <!-- Main container that holds the form -->
+     <div class="container">
+        <!-- Start of the form with an ID of 'form' -->
+        <form id="form" class="form">
+          <!-- Heading for the form -->
+          <h2>Register Now !</h2>
+          <!-- Individual form control for username input -->
+          <div class="form-control">
+            <label for="username">User Name</label>
+            <input type="text" id="username" placeholder="Please Enter Your Name" />
+            <!-- Placeholder for error messages related to username -->
+            <small>Error message</small>
+          </div>
+          <!-- Individual form control for email input -->
+          <div class="form-control">
+            <label for="email">Your Email</label>
+            <input type="text" id="email" placeholder="Please Enter Your Email" />
+            <!-- Placeholder for error messages related to email -->
+            <small>Error message</small>
+          </div>
+          <!-- Individual form control for password input -->
+          <div class="form-control">
+            <label for="password">Set Your Password</label>
+            <input type="password" id="password" placeholder="Type a Password" />
+            <!-- Placeholder for error messages related to password -->
+            <small>Error message</small>
+          </div>
+          <!-- Individual form control for password confirmation input -->
+          <div class="form-control">
+            <label for="password2">Confirm Password</label>
+            <input type="password" id="password2" placeholder="Re-type the Password" />
+            <!-- Placeholder for error messages related to password confirmation -->
+            <small>Error message</small>
+          </div>
+          <!-- Button to submit the form -->
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+  
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
